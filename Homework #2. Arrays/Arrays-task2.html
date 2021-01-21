@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays - Task 2</title>
+</head>
+<body>
+<script>
+    const rocksLevel = [2, 5, 1, 3, 1, 2, 1, 7, 7, 6];
+                    /* [2, 1, 5, 0, 3, 4, 7, 2, 3, 1, 0];
+                       [7, 0, 1, 3, 4, 1, 2, 1];
+                       [2, 1, 5, 0, 3, 4, 7, 2, 3, 1, 0];
+                       [2, 2, 1, 2, 2, 3, 0, 1, 2];
+                       [2, 1, 5, 0, 3, 4, 7, 2, 3, 1, 8];
+                       [2, 2, 2, 2, 2]; */
+    let bottom = 0;
+    let surface = rocksLevel.length - 1;
+    let bottomMax = rocksLevel[bottom];
+    let surfaceMax = rocksLevel[surface];
+    let waterLevel = 0;
+    while (bottom < surface) {
+        if (bottomMax < surfaceMax) {
+            ++bottom;
+            bottomMax = Math.max(bottomMax, rocksLevel[bottom]);
+            waterLevel += bottomMax - rocksLevel[bottom];
+        } else {
+            --surface;
+            surfaceMax = Math.max(surfaceMax, rocksLevel[surface]);
+            waterLevel += surfaceMax - rocksLevel[surface];
+        }
+    }
+    document.write(waterLevel);
+</script>
+</body>
+</html>
