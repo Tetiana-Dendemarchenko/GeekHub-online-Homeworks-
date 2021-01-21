@@ -1,0 +1,63 @@
+body{
+  overflow: hidden;
+  background-color: bisque;
+}
+
+.pet{
+  border-radius: 50px;
+  width: 150px;
+  height: 150px;
+}
+
+.petImg{
+  width: 800px;
+}
+
+.duty{
+  padding: 6px 50px;
+  margin: 10px;
+  background: darksalmon;
+  color: #f2f2f2;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 800px;
+}
+
+.duty:hover{
+  background: #222;
+}
+
+.duty:active{
+  background: #777;
+}
+
+.petStat{
+  width: 100px;
+  background: #ccfff9;
+  margin: 5px 10px;
+  border-radius:4px;
+  padding: 3px 3px;
+}
+
+.statBar{
+  float:left;
+  margin: 10px 25px;
+  width: 180px;
+  color: #15524a;
+}
+
+#dutyBtn{
+  padding: 115px 0;
+  margin: 40px;
+}
+
+#petFace{
+  padding: 0 0;
+  position: relative;
+  left: 400px;
+  top: 100px;
+}
+
+#deathMsg{
+  color: #c44329;
+}
