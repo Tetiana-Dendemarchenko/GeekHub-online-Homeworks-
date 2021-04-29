@@ -41,12 +41,14 @@
     top: 100px;
     left: 100px;
 }
+
 .element-2 {
     position: absolute;
     top: 200px;
     left: 200px;
 
 }
+
 .element-3 {
     position: absolute;
     top: 300px;
