@@ -1,26 +1,20 @@
 // 1st task
 
-function perform() {
-    //TODO implement
+function perform(...params) {
+    let paramsArray = [...params].slice ( 0, [...params].slice ( -1 )[0] );
+    const functionSearch = [...params].find ( param => typeof param === "function" );
+    paramsArray = functionSearch ( paramsArray.split ( "," ) );
+
+    return {
+        paramsArray,
+        functionSearch,
+        then(...params) {
+            const modifiedArray = [...params].slice ( 0, [...params].slice ( -1 )[0] )
+            this.functionSearch = [...params].find ( param => typeof param === "function" );
+            this.paramsArray = this.functionSearch ( ...modifiedArray, this.paramsArray );
+            return this;
+        }
+    }
 }
-
-perform(20, function(value) {
-    console.log(value) //20
-    var param = 1;
-    console.log(param); //1
-    return param;
-})
-
-    .then("a", "b", function(a, b, param) {
-        console.log(++param); //2
-        return param;
-    })
-
-    .then(function(param) { //param === 2
-        console.log(++param); //3
-        return param;
-    });
-
-//
 
 
