@@ -1,4 +1,4 @@
-// 2nd task
+//2nd task
 
 let timer = null;
 document.getElementById('input').addEventListener('keyup', (event) => {
@@ -8,3 +8,4 @@ document.getElementById('input').addEventListener('keyup', (event) => {
         document.getElementById('output').innerHTML = event.target.value;
     }, 5000);
 });
+
