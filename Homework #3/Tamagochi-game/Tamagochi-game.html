@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>My Tamagochi-Game</title>
     <meta charset="UTF-8">
     <meta name="description" content="Creating a Tamagochi-Game">
     <link rel="stylesheet" href="Tamagochi-style.css">
-  </head>
-  <body>
-  <div id="petImg">
-    <div id="petFace">
-      <img src="img/happy.jpg" class="pet" id="pet" alt="petImage">
+</head>
+<body>
+<div class="game-wrapper">
+    <div class="petImg">
+        <div id="petFace">
+            <img src="img/happy.jpg" class="pet" id="pet" alt="petImage">
+        </div>
+        <div class="statBar"><h2><strong>Status</strong></h2>
+            Hunger:
+            <div id="hunger" class="petStat"> 100%</div>
+            Tidiness:
+            <div id="tidiness" class="petStat"> 100%</div>
+            Sleep:
+            <div id="sleep" class="petStat"> 100%</div>
+            Entertainment:
+            <div id="entertainment" class="petStat"> 100%</div>
+            Going out:
+            <div id="goingOut" class="petStat"> 100%</div>
+        </div>
+        <div id="dutyBtn">
+            <p><span class="duty" onclick="FeedYourPet()">FEED YOUR PET</span></p>
+            <p><span class="duty" onclick="GiveShower()">GIVE YOUR PET A SHOWER</span></p>
+            <p><span class="duty" onclick="LetSleep()">PUT YOUR PET TO SLEEP</span></p>
+            <p><span class="duty" onclick="PlayGames()">PLAY WITH YOUR PET</span></p>
+            <p><span class="duty" onclick="GoOut()">GO OUT WITH YOUR PET</span></p>
+        </div>
+        <h3 id="deathMsg"></h3>
     </div>
-    <div class="statBar"><h2><strong>Status</strong></h2>
-      Hunger:<div id="hunger" class="petStat"> 100%</div>
-      Tidiness:<div id="tidiness" class="petStat"> 100%</div>
-      Sleep:<div id="sleep" class="petStat"> 100%</div>
-      Entertainment:<div id="entertainment" class="petStat"> 100%</div>
-      Going out:<div id="goingOut" class="petStat"> 100%</div>
-    </div>
-    <div id="dutyBtn">
-      <p><span class="duty" onclick="FeedYourPet()">FEED YOUR PET</span></p>
-      <p><span class="duty" onclick="GiveShower()">GIVE YOUR PET A SHOWER</span></p>
-      <p><span class="duty" onclick="LetSleep()">PUT YOUR PET TO SLEEP</span></p>
-      <p><span class="duty" onclick="PlayGames()">PLAY WITH YOUR PET</span></p>
-      <p><span class="duty" onclick="GoOut()">GO OUT WITH YOUR PET</span></p>
-    </div>
-    <h3 id="deathMsg"></h3>
-  </div>
-  <script src="Tamagochi-game-script.js"></script>
-  </body>
+</div>
+<script src="Tamagochi-game-script.js"></script>
+</body>
 </html>
