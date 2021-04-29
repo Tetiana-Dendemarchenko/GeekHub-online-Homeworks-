@@ -3,14 +3,16 @@ body{
   background-color: bisque;
 }
 
+.game-wrapper {
+  max-width: 700px;
+  border: 1px solid gray;
+  margin: 0 auto;
+}
+
 .pet{
   border-radius: 50px;
   width: 150px;
   height: 150px;
-}
-
-.petImg{
-  width: 800px;
 }
 
 .duty{
@@ -40,24 +42,24 @@ body{
 }
 
 .statBar{
-  float:left;
+  float: left;
   margin: 10px 25px;
   width: 180px;
   color: #15524a;
 }
 
 #dutyBtn{
-  padding: 115px 0;
+  padding: 100px 0;
   margin: 40px;
 }
 
 #petFace{
-  padding: 0 0;
-  position: relative;
-  left: 400px;
-  top: 100px;
+  margin-top: 60px;
+  text-align: center;
 }
 
 #deathMsg{
+  text-align: center;
+  font-size: 40px;
   color: #c44329;
 }
